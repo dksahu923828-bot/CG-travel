@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chhattisgarh Tourism | Explore CG</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f4f4;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+background:#fff;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#e67e22;
+text-decoration:none;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-size:15px;
+font-weight:500;
+}
+  
+  nav ul li a{
+text-decoration:none;
+color:#333;
+font-size:16px;
+font-weight:500;
+position:relative;
+padding:5px 0;
+transition:0.3s;
+}
+
+/* Hover color */
+
+nav ul li a:hover{
+color:#e67e22;
+}
+
+/* Underline animation */
+
+nav ul li a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-3px;
+background:#e67e22;
+transition:0.3s;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* hamburger */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav ul{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#fff;
+flex-direction:column;
+display:none;
+text-align:center;
+}
+
+nav ul li{
+margin:15px 0;
+}
+
+nav ul.active{
+display:flex;
+}
+
+}
+
+/* HERO SECTION */
+
+.hero{
+height:60vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+padding:20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+  
+ 
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+margin:40px 0 20px;
+font-size:28px;
+color:#2c3e50;
+}
+
+/* CARDS */
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+padding:0 5% 40px;
+}
+
+.card{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card-content h3{
+color:#e67e22;
+margin-bottom:8px;
+}
+
+.card-content p{
+font-size:14px;
+color:#666;
+line-height:1.5;
+}
+
+/* BOOKING */
+
+.booking-container{
+background:#fff;
+margin:40px 5%;
+padding:30px 20px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.booking-form input,
+.booking-form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+}
+
+.submit-btn{
+width:100%;
+background:#e67e22;
+color:#fff;
+border:none;
+padding:14px;
+border-radius:8px;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+.whatsapp-btn img{
+width:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+height:50vh;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title{
+font-size:22px;
+}
+
+.whatsapp-btn span{
+display:none;
+}
+
+.whatsapp-btn{
+padding:15px;
+border-radius:50%;
+}
+
+}
+  
+  .whatsapp-float{
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 100;
+}
+
+.whatsapp-float img{
+width: 55px;
+height: 55px;
+}
+  
+  footer{
+background:#222;
+color:#fff;
+padding:40px 5% 20px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.footer-box h3{
+margin-bottom:10px;
+color:#e67e22;
+}
+
+.footer-box p{
+font-size:14px;
+margin-bottom:8px;
+}
+
+.footer-box ul{
+list-style:none;
+}
+
+.footer-box ul li{
+margin-bottom:8px;
+}
+
+.footer-box ul li a{
+color:#ddd;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-box ul li a:hover{
+color:#e67e22;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+border-top:1px solid #444;
+padding-top:10px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<a href="#" class="logo">CG TOURISM</a>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<ul id="menu">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="About.html">About</a></li>
+  
+<li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="#booking">Book Now</a></li>
+  
+
+</ul>
+
+</nav>
+<section class="hero">
+
+<div>
+<h1>Visit Chhattisgarh</h1>
+<p>Exploring the Natural Beauty of CG</p>
+</div>
+
+</section>
+
+<h2 class="section-title">Explore Best Spots</h2>
+ 
+<div class="container">
+
+<div class="card">
+<img src="chitrkut.jpg">
+<div class="card-content">
+<h3>Chitrakote Waterfalls</h3>
+<p>Bastar ka khubsurat waterfall jise India ka Niagara Falls kaha jata hai.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Ganesh.jpg">
+<div class="card-content">
+<h3>Dholkal Ganesh</h3>
+<p> Dholkal Ganesh chhattisgarh ka prashidh Tourist Spot hai,Jo pahadon ke bich sthit hai .</p>
+</div>
+</div>
+
+<div class="card">
+<img src="sirpur.jpg">
+<div class="card-content">
+<h3>Ancient Sirpur</h3>
+<p>Itihaas aur mandiron ki khoj karne ke liye sabse acchi jagah.</p>
+</div>
+</div>
+  
+  <div class="card">
+<img src="2.jpg">
+<div class="card-content">
+<h3>Danteshwari</h3>
+<p>Danteshwari mandir chhattisgarh ke sabse prachin mandiro me se ek hai.</p>
+</div>
+</div>
+
+ 
+  <div class="card">
+<img src="rajim.jpg">
+<div class="card-content">
+<h3>Rajim Temple</h3>
+<p>Rajim ko chhattisgarh ka prayag kaha jata hai, jaha teen nadiyon (Mahanadi,Sondur aur Pairi) ka sangam hota hai.</p>
+</div>
+</div>
+
+
+ 
+  <div class="card">
+<img src="shiv.jpg">
+<div class="card-content">
+<h3>Bhoramdev Temple</h3>
+<p>Ise chhattisgarh ke khajuraho ke naam se jana jata hai. Yah vastukala aur kamukh nakkashi ke liye prashidh hai.</p>
+</div>
+</div>
+
+
+ 
+  <div class="card">
+<img src="mandir.jpg">
+<div class="card-content">
+<h3>Bamleshwari</h3>
+<p>Bamleshwari mandir chhattisgarh ke sabse prachin mandiro me se ek hai.</p>
+</div>
+</div>
+  
+  <div class="card">
+<img src="mainpat.jpg">
+<div class="card-content">
+<h3>Mainpat</h3>
+<p>yah samudra tal se lagbhag 1, 000 m ki unchai par sthit Sundar pathar hai . ise Chhattisgarh ka Shimla bhi Kaha jata hai.</p>
+</div>
+</div>
+
+</div>
+
+<div class="booking-container" id="booking">
+
+<h2 style="text-align:center;margin-bottom:20px;">Book Your Tour</h2>
+
+<form class="booking-form">
+
+<input type="text" placeholder="Aapka Naam" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Kahan Jana Hai? (e.g. Bastar)" required>
+
+<textarea rows="4" placeholder="Kuch aur jaankari?"></textarea>
+
+<button class="submit-btn">Enquiry Bhejein</button>
+
+</form>
+
+</div>
+
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="50">
+</a>
+  
+  <script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+  
+   <footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h3>CG Tourism</h3>
+<p>Chhattisgarh ke sundar tourist places explore karne ke liye best tour service.</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="index1.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="packages.html">Tour Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-box">
+<h3>Contact Info</h3>
+<p>📍 Mungeli, Chhattisgarh</p>
+<p>📞 +91 6267677645</p>
+<p>📧 vinayaktiwari6267@gmail.com</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 CG Tourism | All Rights Reserved</p>
+</div>
+
+</footer>
+
+</body>
+</html>
